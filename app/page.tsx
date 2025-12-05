@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Mail, Download, Server, Code, Layers, Wifi, Terminal } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Server, Code, Layers, GraduationCap, Terminal } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -56,7 +56,7 @@ export default function Portfolio() {
           </div>
         </motion.section>
 
-        {/* --- STACK TÉCNICO (Marquee) --- */}
+        {/* --- STACK TÉCNICO --- */}
         <section className="mb-24">
           <h2 className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-6">Tecnologías</h2>
           <div className="flex flex-wrap gap-3">
@@ -68,45 +68,71 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* --- EXPERIENCIA (Timeline) --- */}
+        {/* --- EXPERIENCIA --- */}
         <section className="mb-24">
           <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-            <Layers className="text-emerald-500" /> Experiencia
+            <Layers className="text-emerald-500" /> Experiencia Laboral
           </h2>
 
           <div className="space-y-12 border-l border-neutral-800 ml-3 pl-8 relative">
             
-            {/* ITEM 1 */}
             <div className="relative">
               <span className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-neutral-950 border-2 border-emerald-500"></span>
               <h3 className="text-xl font-bold text-white">Technical Support Operator (NOC)</h3>
               <p className="text-emerald-400 mb-2">Sondeos Global • Jun 2025 - Presente</p>
               <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-400">
-                <li>Soporte técnico especializado usando <strong>Wireshark</strong> y entornos <strong>Linux</strong> para detección de incidencias.</li>
+                <li>Soporte técnico especializado usando <strong>Wireshark</strong> y entornos <strong>Linux</strong>.</li>
                 <li>Consultas y análisis de bases de datos con <strong>MongoDB</strong> y Workbench.</li>
-                <li>Validación de APIs con <strong>Postman</strong> colaborando con equipos de QA y desarrollo.</li>
+                <li>Validación de APIs con <strong>Postman</strong> colaborando con equipos de QA.</li>
               </ul>
             </div>
 
-            {/* ITEM 2 */}
             <div className="relative">
               <span className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-neutral-950 border-2 border-neutral-700"></span>
               <h3 className="text-xl font-bold text-white">Pasante Desarrollador Full Stack</h3>
               <p className="text-neutral-400 mb-2">FORIT Software Factory • Oct 2024 - Ene 2025</p>
               <ul className="list-disc list-outside ml-4 space-y-2 text-neutral-400">
                 <li>Desarrollo de plataforma de recruiting multi-tenant para AMIA.</li>
-                <li>Implementación de <strong>Clean Architecture</strong> y metodologías <strong>TDD</strong> (Test Driven Development).</li>
+                <li>Prácticas de <strong>Clean Architecture</strong> y <strong>TDD</strong>.</li>
               </ul>
             </div>
 
-            {/* ITEM 3 */}
             <div className="relative">
               <span className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-neutral-950 border-2 border-neutral-700"></span>
               <h3 className="text-xl font-bold text-white">Soporte Técnico</h3>
               <p className="text-neutral-400 mb-2">CAT Technologies • Mar 2023 - Ene 2025</p>
               <p className="text-neutral-400">
-                Diagnóstico y resolución de problemas de software/hardware y conectividad para clientes finales.
+                Diagnóstico y resolución de problemas de software/hardware y conectividad.
               </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* --- NUEVA SECCIÓN: EDUCACIÓN --- */}
+        <section className="mb-24">
+          <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+            <GraduationCap className="text-blue-500" /> Formación Académica
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
+              <h3 className="text-lg font-bold text-white mb-1">Técnico Superior en Informática Aplicada</h3>
+              <p className="text-blue-400 text-sm mb-3">UTN - INSPT • 2025 - Presente</p>
+              <p className="text-neutral-400 text-sm">Formación universitaria en curso.</p>
+            </div>
+
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
+              <h3 className="text-lg font-bold text-white mb-1">Programador Web Full Stack</h3>
+              <p className="text-blue-400 text-sm mb-3">Digital House / Fundación Formar • 2023 - 2024</p>
+              <p className="text-neutral-400 text-sm">Bootcamp intensivo enfocado en tecnologías web modernas.</p>
+            </div>
+
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
+              <h3 className="text-lg font-bold text-white mb-1">Programación Informática y .NET</h3>
+              <p className="text-blue-400 text-sm mb-3">Fundación PROEM • 2021 - 2022</p>
+              <p className="text-neutral-400 text-sm">Fundamentos de programación y ecosistema Microsoft.</p>
             </div>
 
           </div>
@@ -125,33 +151,36 @@ export default function Portfolio() {
               whileHover={{ y: -5 }}
               className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group"
             >
-              <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
-                {/* Decoración abstracta */}
+              <div className="h-64 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-neutral-900/0 to-transparent"></div>
-                <Terminal size={48} className="text-emerald-500/50 group-hover:text-emerald-400 transition duration-500" />
+                <Terminal size={64} className="text-emerald-500/50 group-hover:text-emerald-400 transition duration-500" />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2">Tienda Tech Full Stack</h3>
-                <p className="text-neutral-400 text-sm mb-4">
+              <div className="p-8">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold text-white">Tienda Tech Full Stack</h3>
+                  <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-full border border-emerald-500/20">MVP COMPLETO</span>
+                </div>
+                <p className="text-neutral-400 mb-6">
                   E-commerce completo con panel administrativo, gestión de inventario en tiempo real y seguimiento de reparaciones.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   <span className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">Next.js 14</span>
+                  <span className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">TypeScript</span>
                   <span className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">Prisma</span>
                   <span className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">Zustand</span>
+                  <span className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">PostgreSQL</span>
                 </div>
-                <div className="flex gap-3">
-                  <a href="https://mi-tienda-tech.vercel.app" target="_blank" className="flex-1 text-center py-2 bg-white text-black font-bold rounded-lg hover:bg-emerald-400 transition text-sm">
-                    Ver Demo
+                <div className="flex gap-4">
+                  <a href="https://mi-tienda-tech-beta.vercel.app" target="_blank" className="flex-1 text-center py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-400 transition">
+                    Ver Demo 
+                    {/* en Vivo */}
                   </a>
-                  <a href="https://github.com/andonysan18/mi-tienda-tech" target="_blank" className="flex-1 text-center py-2 bg-neutral-800 text-white font-bold rounded-lg hover:bg-neutral-700 transition text-sm">
-                    Código
+                  <a href="https://github.com/andonysan18/mi-tienda-tech" target="_blank" className="flex-1 text-center py-3 bg-neutral-800 text-white font-bold rounded-xl hover:bg-neutral-700 transition border border-neutral-700">
+                    Ver Código
                   </a>
                 </div>
               </div>
             </motion.div>
-
-            {/* Aquí puedes agregar más proyectos en el futuro */}
             
           </div>
         </section>
