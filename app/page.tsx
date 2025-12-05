@@ -149,7 +149,7 @@ export default function Portfolio() {
               <span className="absolute -left-[39px] top-2 w-5 h-5 rounded-full bg-neutral-950 border-2 border-neutral-700"></span>
               <h3 className="text-xl font-bold text-white">Soporte Técnico</h3>
               <p className="text-neutral-400 mb-2">CAT Technologies • Mar 2023 - Ene 2025</p>
-              <p className="text-neutral-400">Diagnóstico y resolución de problemas de software/hardware.</p>
+              <p className="text-neutral-400">Diagnóstico y resolución de problemas de software/hardware y conectividad.</p>
             </div>
           </div>
         </section>
@@ -170,6 +170,11 @@ export default function Portfolio() {
               <p className="text-blue-400 text-sm mb-3">Digital House / Fundación Formar • 2023 - 2024</p>
               <p className="text-neutral-400 text-sm">Bootcamp intensivo enfocado en tecnologías web modernas.</p>
             </div>
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
+              <h3 className="text-lg font-bold text-white mb-1">Programación Informática y .NET</h3>
+              <p className="text-blue-400 text-sm mb-3">Fundación PROEM • 2021 - 2022</p>
+              <p className="text-neutral-400 text-sm">Fundamentos de programación y ecosistema Microsoft.</p>
+            </div>
           </div>
         </section>
 
@@ -178,7 +183,7 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
             <Code className="text-purple-500" /> Proyectos Destacados
           </h2>
-          <div className="grid md:grid-cols-1 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             <motion.div whileHover={{ y: -5 }} className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
               <div className="h-64 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-neutral-900/0 to-transparent"></div>
