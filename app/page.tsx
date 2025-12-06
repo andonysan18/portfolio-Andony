@@ -229,7 +229,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a href="https://mi-tienda-tech.vercel.app" target="_blank" rel="noreferrer" className="flex-1 text-center py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-400 transition">Ver Demo</a>
+                  <a href="https://mi-tienda-tech-beta.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-400 transition">Ver Demo</a>
                   <a href="https://github.com/andonysan18/mi-tienda-tech" target="_blank" rel="noreferrer" className="flex-1 text-center py-3 bg-neutral-800 text-white font-bold rounded-xl hover:bg-neutral-700 transition border border-neutral-700">Ver Código</a>
                 </div>
               </div>
