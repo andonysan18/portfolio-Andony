@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 
 // [IMPORTANTE]: Descomenta esto en tu local
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 export default function Portfolio() {
   
@@ -32,7 +32,7 @@ export default function Portfolio() {
     };
 
     try {
-      // await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       await new Promise(resolve => setTimeout(resolve, 1500)); 
       toast.success("¡Mensaje enviado! Te responderé pronto. 🚀");
       setFormData({ name: "", email: "", message: "" });
@@ -185,22 +185,38 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
             <GraduationCap className="text-blue-500" /> Formación Académica
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
-              <h3 className="text-lg font-bold text-white mb-1">Técnico Superior en Informática Aplicada</h3>
-              <p className="text-blue-400 text-sm mb-3">UTN - INSPT • 2025 - Presente</p>
-              <p className="text-neutral-400 text-sm">Formación universitaria en curso.</p>
+          <div className="grid md:grid-cols-1 gap-6">
+            
+            {/* UTN */}
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition group">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition">Técnico Superior en Informática Aplicada</h3>
+                <span className="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded border border-blue-500/20">En curso</span>
+              </div>
+              <p className="text-neutral-400 text-sm mb-1">UTN - INSPT</p>
+              <p className="text-neutral-500 text-xs">2025 - Presente</p>
             </div>
-            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
-              <h3 className="text-lg font-bold text-white mb-1">Programador Web Full Stack</h3>
-              <p className="text-blue-400 text-sm mb-3">Digital House / Fundación Formar • 2023 - 2024</p>
-              <p className="text-neutral-400 text-sm">Bootcamp intensivo enfocado en tecnologías web modernas.</p>
+
+            {/* Digital House */}
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-emerald-500/30 transition group">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition">Programador Web Full Stack</h3>
+                <span className="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded border border-emerald-500/20">Finalizado</span>
+              </div>
+              <p className="text-neutral-400 text-sm mb-1">Digital House / Fundación Formar</p>
+              <p className="text-neutral-500 text-xs">2023 - 2024</p>
             </div>
-            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-blue-500/30 transition">
-              <h3 className="text-lg font-bold text-white mb-1">Programación Informática y .NET</h3>
-              <p className="text-blue-400 text-sm mb-3">Fundación PROEM • 2021 - 2022</p>
-              <p className="text-neutral-400 text-sm">Fundamentos de programación y ecosistema Microsoft.</p>
+
+            {/* Fundación PROEM */}
+            <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl hover:border-purple-500/30 transition group">
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition">Programación Informática y .NET</h3>
+                <span className="text-xs bg-purple-500/10 text-purple-400 px-2 py-1 rounded border border-purple-500/20">Finalizado</span>
+              </div>
+              <p className="text-neutral-400 text-sm mb-1">Fundación PROEM</p>
+              <p className="text-neutral-500 text-xs">2021 - 2022</p>
             </div>
+
           </div>
         </section>
 
