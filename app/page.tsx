@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 // 1. AGREGAMOS LOS ICONOS MENU Y X
-import { Github, Linkedin, Mail, Download, Layers, GraduationCap, Code, Terminal, Send, Menu, X } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Layers, GraduationCap, Code, Terminal, Send, Menu, X, ArrowUpRight, Globe, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "sonner";
 
@@ -221,37 +221,104 @@ export default function Portfolio() {
         </section>
 
         {/* PROYECTOS */}
-        <section id="proyectos" className="mb-32 scroll-mt-24">
-          <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
-            <Code className="text-purple-500" /> Proyectos Destacados
-          </h2>
-          <div className="grid md:grid-cols-1 gap-6">
-            <motion.div whileHover={{ y: -5 }} className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group">
-              <div className="h-64 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-neutral-900/0 to-transparent"></div>
-                <Terminal size={64} className="text-emerald-500/50 group-hover:text-emerald-400 transition duration-500" />
-              </div>
-              <div className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-white">Tienda Tech Full Stack</h3>
-                  <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-full border border-emerald-500/20">MVP COMPLETO</span>
-                </div>
-                <p className="text-neutral-400 mb-6">
-                  E-commerce híbrido con gestión de servicio técnico. Panel administrativo, carrito de compras persistente, autenticación JWT.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {["Next.js 14", "TypeScript", "Prisma", "PostgreSQL", "Zustand"].map(t => (
-                    <span key={t} className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">{t}</span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <a href="https://mi-tienda-tech-beta.vercel.app/" target="_blank" rel="noreferrer" className="flex-1 text-center py-3 bg-white text-black font-bold rounded-xl hover:bg-emerald-400 transition">Ver Demo</a>
-                  <a href="https://github.com/andonysan18/mi-tienda-tech" target="_blank" rel="noreferrer" className="flex-1 text-center py-3 bg-neutral-800 text-white font-bold rounded-xl hover:bg-neutral-700 transition border border-neutral-700">Ver Código</a>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+<section id="proyectos" className="mb-32 scroll-mt-24">
+  <h2 className="text-3xl font-bold text-white mb-10 flex items-center gap-3">
+    <Code className="text-purple-500" /> Proyectos Recientes
+  </h2>
+  
+  {/* Cambiado a 2 columnas para mostrar ambos proyectos */}
+  <div className="grid md:grid-cols-2 gap-6">
+
+    {/* PROYECTO 1: ANDINA TRAVEL */}
+    <motion.div 
+      whileHover={{ y: -5 }} 
+      className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-blue-500/50 transition group"
+    >
+      <div className="h-48 bg-gradient-to-br from-blue-900/20 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-neutral-900/0 to-transparent"></div>
+        <Globe size={64} className="text-blue-500/50 group-hover:text-blue-400 transition duration-500" />
+      </div>
+      
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-bold text-white">Andina Travel</h3>
+          <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-xs font-bold rounded-full border border-blue-500/20">
+            PRODUCCIÓN
+          </span>
+        </div>
+        
+        <p className="text-neutral-400 text-sm mb-6 h-20">
+          Plataforma web para agencia de turismo. Integración de correos transaccionales, formularios validados y sistema de autenticación preparado para escalabilidad futura.
+        </p>
+        
+        {/* Tags basados en tu package.json */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {["Next.js 16", "React 19", "NextAuth.js", "Resend", "Zod"].map((t) => (
+            <span key={t} className="text-xs px-2 py-1 bg-neutral-950 rounded text-blue-400 border border-neutral-800">
+              {t}
+            </span>
+          ))}
+        </div>
+        
+        <div className="flex gap-4">
+          <a 
+            href="https://www.andinatravel.tur.ar/" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-white text-black font-bold rounded-xl hover:bg-blue-400 transition group-hover:shadow-[0_0_20px_rgba(96,165,250,0.3)]"
+          >
+            Visitar Sitio <ArrowUpRight size={18} />
+          </a>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* PROYECTO 2: CATALINA VIAJES */}
+    <motion.div 
+      whileHover={{ y: -5 }} 
+      className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition group"
+    >
+      <div className="h-48 bg-gradient-to-br from-emerald-900/20 to-slate-900 flex items-center justify-center border-b border-neutral-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-neutral-900/0 to-transparent"></div>
+        <MapPin size={64} className="text-emerald-500/50 group-hover:text-emerald-400 transition duration-500" />
+      </div>
+      
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <h3 className="text-xl font-bold text-white">Catalina Viajes</h3>
+          <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold rounded-full border border-emerald-500/20">
+            EN DESARROLLO
+          </span>
+        </div>
+        
+        {/* DESCRIPCIÓN ACTUALIZADA */}
+        <p className="text-neutral-400 text-sm mb-6 h-20">
+  Plataforma web integral de turismo. Diseño UI/UX inmersivo con carruseles interactivos, optimizado para conversión y preparado para escalar con futuras integraciones.
+</p>
+        
+        <div className="flex flex-wrap gap-2 mb-8">
+          {["Next.js 16", "React 19", "Tailwind CSS v4", "TypeScript", "Embla UI"].map((t) => (
+            <span key={t} className="text-xs px-2 py-1 bg-neutral-950 rounded text-emerald-400 border border-neutral-800">
+              {t}
+            </span>
+          ))}
+        </div>
+        
+        <div className="flex gap-4">
+          <a 
+            href="https://catalina-viajes.vercel.app/" 
+            target="_blank" 
+            rel="noreferrer" 
+            className="flex-1 flex items-center justify-center gap-2 py-3 bg-neutral-800 text-white font-bold rounded-xl hover:bg-neutral-700 transition border border-neutral-700"
+          >
+            Ver Demo <ArrowUpRight size={18} />
+          </a>
+        </div>
+      </div>
+    </motion.div>
+
+  </div>
+</section>
 
         {/* CONTACTO */}
         <section id="contacto" className="mb-24 scroll-mt-24">
