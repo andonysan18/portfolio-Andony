@@ -250,7 +250,7 @@ export default function PortfolioSplit() {
                     <li>Programación funcional y Código Limpio.</li>
                   </ul>
                   <ul className="mt-4 flex flex-wrap gap-2">
-                    {["React", "C#", ".NET", "TDD", "Git"].map(tech => (
+                    {["React", "NodeJS", "Tailwind CSS", "TDD", "Git", "MongoDB", "TypeScript", "Express"].map(tech => (
                       <li key={tech} className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">{tech}</li>
                     ))}
                   </ul>
